@@ -8,4 +8,8 @@ Few short prompt template
 Ouput parser
 <br>
 Document Loader
+<br>
+Text_Splitter,CharacterTextSplitter,Recursive
+<br>
+Embeddings ,Huggingface,google_generative_genai etc
 
