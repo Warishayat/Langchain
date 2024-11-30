@@ -14,6 +14,7 @@ I’m excited to start creating a variety of chains using LangChain, an open-sou
 - **Document Loaders**: Efficiently loading and handling external documents for processing with LLMs.
 - **Text Splitters**: Breaking text into smaller, manageable chunks using `CharacterTextSplitter` and `RecursiveTextSplitter` to improve processing speed and accuracy.
 - **Embeddings**: Integrating embeddings from HuggingFace, Google Generative GenAI, and other sources for powerful document retrieval and search capabilities.
+- **Vector Stores**: Storing and retrieving vector embeddings efficiently using tools like FAISS, Chroma, Pinecone, and others for high-performance document retrieval and similarity search.
 
 ---
 
@@ -24,6 +25,7 @@ I’m excited to start creating a variety of chains using LangChain, an open-sou
 - **Google Generative GenAI**: Leveraging Google's advanced generative models for high-quality text generation and understanding.
 - **Text Splitters**: Using advanced text splitting techniques to break down long documents into more digestible chunks.
 - **Prompt Templates**: Dynamically creating prompts to interact with LLMs in specific ways.
+- **Vector Stores**: Using FAISS, Chroma, Pinecone, and other vector stores to manage and search through high-dimensional embeddings efficiently.
 
 ---
 
@@ -32,7 +34,7 @@ I’m excited to start creating a variety of chains using LangChain, an open-sou
 ### 1. **Prompt Templates**
 - Templates define how the input data is structured and guide the language model's behavior.
 - Example: Using a **chat-based prompt** to build a dynamic conversation flow.
-  
+
 ### 2. **Output Parsers**
 - After generating a response, it's important to parse and structure the output.
 - Example: Parsing text for specific pieces of information such as names, dates, or key concepts.
@@ -48,6 +50,12 @@ I’m excited to start creating a variety of chains using LangChain, an open-sou
 ### 5. **Embeddings**
 - **HuggingFace Embeddings**: Transform text data into vector embeddings for search and retrieval tasks.
 - **Google Generative GenAI Embeddings**: Integrating Google's GenAI embeddings to enhance text generation and retrieval capabilities.
+
+### 6. **Vector Stores**
+- **FAISS**: A popular library for efficient similarity search and clustering of embeddings, widely used for large-scale document retrieval tasks.
+- **Chroma**: An open-source vector database for storing and querying embeddings that integrates with LangChain to facilitate powerful search and retrieval.
+- **Pinecone**: A managed vector database solution that enables high-performance, real-time similarity search and indexing of vector embeddings.
+- **Weaviate**: A vector search engine for machine learning models that also integrates well with LangChain for document retrieval and other use cases.
 
 ---
 
@@ -95,6 +103,26 @@ chunks = splitter.split_text(text)
 print(chunks)
 ```
 
+### Example 4: **Using a Vector Store (FAISS) for Document Retrieval**
+```python
+import faiss
+import numpy as np
+
+# Create random embeddings for 100 documents
+embeddings = np.random.random((100, 128)).astype('float32')
+
+# Create a FAISS index and add the embeddings
+index = faiss.IndexFlatL2(128)  # Use L2 distance for search
+index.add(embeddings)
+
+# Now, query with a new embedding (for example, from a user's question)
+query = np.random.random((1, 128)).astype('float32')
+distances, indices = index.search(query, k=5)
+
+print("Closest matches:", indices)
+print("Distances:", distances)
+```
+
 ---
 
 ## 📈 What’s Coming Next
@@ -125,5 +153,3 @@ If you have any suggestions, ideas, or improvements, feel free to open an issue 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
