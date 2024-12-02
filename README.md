@@ -15,6 +15,7 @@ I’m excited to start creating a variety of chains using LangChain, an open-sou
 - **Text Splitters**: Breaking text into smaller, manageable chunks using `CharacterTextSplitter` and `RecursiveTextSplitter` to improve processing speed and accuracy.
 - **Embeddings**: Integrating embeddings from HuggingFace, Google Generative GenAI, and other sources for powerful document retrieval and search capabilities.
 - **Vector Stores**: Storing and retrieving vector embeddings efficiently using tools like FAISS, Chroma, Pinecone, and others for high-performance document retrieval and similarity search.
+- **Contextual Compression**: Leveraging **contextual compression techniques** to optimize input and output data for LLMs, ensuring more efficient processing and delivering state-of-the-art results in natural language understanding and generation tasks.
 
 ---
 
@@ -26,6 +27,7 @@ I’m excited to start creating a variety of chains using LangChain, an open-sou
 - **Text Splitters**: Using advanced text splitting techniques to break down long documents into more digestible chunks.
 - **Prompt Templates**: Dynamically creating prompts to interact with LLMs in specific ways.
 - **Vector Stores**: Using FAISS, Chroma, Pinecone, and other vector stores to manage and search through high-dimensional embeddings efficiently.
+- **Contextual Compression**: Techniques to compress large inputs while maintaining context, optimizing performance and achieving state-of-the-art results in natural language generation tasks.
 
 ---
 
@@ -56,6 +58,9 @@ I’m excited to start creating a variety of chains using LangChain, an open-sou
 - **Chroma**: An open-source vector database for storing and querying embeddings that integrates with LangChain to facilitate powerful search and retrieval.
 - **Pinecone**: A managed vector database solution that enables high-performance, real-time similarity search and indexing of vector embeddings.
 - **Weaviate**: A vector search engine for machine learning models that also integrates well with LangChain for document retrieval and other use cases.
+
+### 7. **Contextual Compression**
+- **Contextual Compression** involves using techniques that compress the input data while retaining the most important contextual information. This method allows large documents or inputs to be handled efficiently by LLMs without losing key information, improving the model’s processing speed and delivering high-quality outputs. By applying **contextual compression**, I aim to optimize the interaction with language models, achieving state-of-the-art performance for NLP tasks.
 
 ---
 
